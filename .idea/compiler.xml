@@ -6,7 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="AndroidLevel1" />
+        <module name="lesson_two" />
+        <module name="lessons_one" />
       </profile>
     </annotationProcessing>
   </component>
