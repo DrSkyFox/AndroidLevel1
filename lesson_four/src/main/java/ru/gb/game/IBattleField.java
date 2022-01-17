@@ -9,5 +9,5 @@ public interface IBattleField {
     Field getFiledByCoordinate(int x, int y);
     int length();
     int getFieldHash();
-
+    boolean checkFillField();
 }

@@ -12,7 +12,6 @@ public class BattleField implements IBattleField {
 
     private Field[][] field;
     private boolean showFieldNumber = false;
-
     private Map<Integer, Field> map;
 
 
@@ -58,7 +57,7 @@ public class BattleField implements IBattleField {
             str = new StringBuilder();
             for (int j = 0; j < field.length; j++) {
                 str.append("| ");
-                if(showFieldNumber && field[i][j].getMarkPlayer().equals(MarkPlayer.EMPTY)) {
+                if (showFieldNumber && field[i][j].getMarkPlayer().equals(MarkPlayer.EMPTY)) {
                     str.append(field[i][j].getFieldNumber());
                 } else {
                     str.append(field[i][j].getMarkPlayer().getToken());
@@ -88,6 +87,7 @@ public class BattleField implements IBattleField {
 
     @Override
     public boolean isWin(MarkPlayer markPlayer) {
+
         //главная диагональ матрицы
         if (subChecker(0, 0, 1, 1, markPlayer)) return true;
         //обратная диагональ матрицы
@@ -98,6 +98,18 @@ public class BattleField implements IBattleField {
             if (subChecker(0, i, 1, 0, markPlayer)) return true;
         }
         return false;
+    }
+
+    @Override
+    public boolean checkFillField() {
+        for (int i = 1; i < map.size()+1; i++) {
+            if (
+                    map.get(i).getMarkPlayer().equals(MarkPlayer.EMPTY)
+            ) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private boolean subChecker(int startXVal, int startYVal, int stepX, int stepY, MarkPlayer markPlayer) {

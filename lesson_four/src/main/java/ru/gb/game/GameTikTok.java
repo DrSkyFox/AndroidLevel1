@@ -16,6 +16,7 @@ public class GameTikTok {
     private IBattleField battleField;
     private Map<Integer, PlayersDo> players;
     private Scanner scanner = new Scanner(System.in);
+    private int turn = 1;
 
 
     public GameTikTok() {
@@ -124,6 +125,15 @@ public class GameTikTok {
                 break;
             }
 
+            turn++;
+            System.out.println("Turn : " + turn);
+            if(turn >= battleField.length()) {
+                if(battleField.checkFillField()) {
+                    System.out.println("Ничья");
+                    break;
+                }
+            }
+
             System.out.println("Ходит второй игрок" + players.get(2).getName());
             players.get(2).doTurn();
             battleField.printField();
@@ -132,8 +142,19 @@ public class GameTikTok {
                 System.out.println("Игрок " + players.get(2).getMarkPlayer() + " победил !");
                 break;
             }
+            turn++;
+            System.out.println("Turn : " + turn);
+            if(turn >= battleField.length()) {
+                if(battleField.checkFillField()) {
+                    System.out.println("Ничья");
+                    break;
+                }
+            }
         }
 
     }
+
+
+
 
 }
