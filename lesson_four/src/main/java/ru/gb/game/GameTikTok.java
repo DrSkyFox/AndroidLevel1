@@ -43,7 +43,7 @@ public class GameTikTok {
         }
 
         System.out.println("Второй игрок");
-        playerTwo = createNewPlayer(new PlayerHuman());
+        playerTwo = createNewPlayer(new PlayerHuman(battleField));
 
         System.out.println("Определяем кто первый ходит");
 
