@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 
 public class Tote implements Runnable {
 
-    private Scanner scanner;
 
     private Map<Integer, Conquerable> conquerables;
     private Map<Integer, Preventable> preventables;
@@ -18,10 +17,30 @@ public class Tote implements Runnable {
     private static final Integer DEFAULT_COUNT_PREVENT = 20;
 
     public Tote(Scanner scanner) {
+        initDefault(scanner);
     }
 
     public Tote() {
         initDefault();
+    }
+
+    private void initDefault(Scanner scanner) {
+        System.out.println("Подготовка к забегу");
+        System.out.println("Введите кол-во участников");
+        preConquerable(scannerCheck(scanner));
+        printArray(conquerables);
+        System.out.println("Введите кол-во препятсвий");
+        prePreventable(scannerCheck(scanner));
+        printArray(preventables);
+    }
+
+    private Integer scannerCheck(Scanner scanner) {
+        while (true) {
+            if(scanner.hasNextInt()) {
+                break;
+            }
+        }
+        return scanner.nextInt();
     }
 
     private void initDefault() {
