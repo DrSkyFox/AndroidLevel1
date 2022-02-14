@@ -17,6 +17,7 @@
         <module>lesson_seven</module>
         <module>lesson_eight</module>
         <module>lesson_nine</module>
+        <module>lesson_ten</module>
     </modules>
     <packaging>pom</packaging>
 
