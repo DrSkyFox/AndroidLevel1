@@ -20,6 +20,7 @@
         <module>lesson_ten</module>
         <module>lesson_eleven</module>
         <module>lesson_twelve</module>
+        <module>lesson_thirteenth</module>
     </modules>
     <packaging>pom</packaging>
 
