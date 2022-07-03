@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="lesson_four" />
         <module name="lesson_thirteenth" />
+        <module name="lesson_fourteen" />
         <module name="lesson_ten" />
         <module name="lesson_twelve" />
         <module name="lessons_one" />

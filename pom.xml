@@ -21,6 +21,7 @@
         <module>lesson_eleven</module>
         <module>lesson_twelve</module>
         <module>lesson_thirteenth</module>
+        <module>lesson_fourteen</module>
     </modules>
     <packaging>pom</packaging>
 
